@@ -79,13 +79,15 @@ so basically we dont want to give specific control to the user and that time we 
 
  ```python 
   class Atm:
-    def __init__(self) :
+    def __init__(self) : 
+        # Constructor
         self.pin= ""
         self.balance=0
-        self.menu()
+        self.menu() #we can access menu method property cause we use self
         
 
     def menu(self):
+        # method
         user_input= input(""" 
                          Hello, How would you like to proceed
                           1.Enter 1 to create pin
@@ -106,7 +108,7 @@ so basically we dont want to give specific control to the user and that time we 
         else:
            print("Bye")          
         
-
+    # methods
     def create_pin(self):
        self.pin=input("Enter your pin : ")
        print("Pin set sucessfully")
@@ -138,7 +140,7 @@ so basically we dont want to give specific control to the user and that time we 
           print(self.balance)
        else:
           print("invalid pin")  
-#   Object creation name bank based on the class Atm
+# Object creation name bank based on the class Atm
   bank=Atm()
  ```
 
