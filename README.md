@@ -21,14 +21,34 @@ Imagine you're building a virtual world, like a video game or a simulation. In t
 
 ## Break Down Each of the concepts with code and example 
 ### Function vs Method: 
-**Functions:** A function is a block of code that performs a specific task. It is defined outside of any class or object.
+## Functions
 
-**Usage:** Functions are standalone and can be called from anywhere in the code, as long as they are in the same scope or imported.
+- **Definition:** A function is a standalone block of code that performs a specific task. It is defined outside of any class or object.
 
-**Example:** 
-```python
+- **Usage:** Functions can be called from anywhere in the code, as long as they are in the same scope or imported.
+
+- **Example:**
+
+    ```python
     def add_numbers(a, b):
         return a + b
 
     result = add_numbers(5, 7)
+    ```
+
+## Methods
+
+- **Definition:** A method is a function associated with an object. It is defined within a class and is called on instances of that class.
+
+- **Usage:** Methods are called on objects and operate on the data within those objects.
+
+- **Example:**
+
+    ```python
+    class Calculator:
+        def add_numbers(self, a, b):
+            return a + b
+
+    calc = Calculator()
+    result = calc.add_numbers(5, 7)
     ```
