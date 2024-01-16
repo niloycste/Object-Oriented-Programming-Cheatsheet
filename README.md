@@ -74,7 +74,7 @@ so basically we dont want to give specific control to the user and that time we 
 
 - Inside Class only two things are possible one is data and other one is method. Only object of this class can access that data and method even one method can't access another method and its datas within the class. if one method is trying to access another method we need and object and as `self` is the current object so we can access if we use self and thats why we use `self`.
 
-## Simple Implementation based on our learning
+## Simple Implementation based on `class`,`constructor`,`method`,`object`
  Now let's write a code  to understand oop better based on atm system 
 
  ```python 
