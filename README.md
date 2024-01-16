@@ -20,7 +20,7 @@ Imagine you're building a virtual world, like a video game or a simulation. In t
 <img src = "images/oop concept.jpg" width="1200" height="400">
 
 ## Break Down Each of the concepts with code and example 
-### Function vs Method**: 
+### Function vs Method: 
 **Functions:**
 
 **Definition:** A function is a block of code that performs a specific task. It is defined outside of any class or object.
