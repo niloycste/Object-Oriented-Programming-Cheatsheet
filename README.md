@@ -138,8 +138,8 @@ so basically we dont want to give specific control to the user and that time we 
           print(self.balance)
        else:
           print("invalid pin")  
-
- bank=Atm()
+#   Object creation name bank based on the class Atm
+  bank=Atm()
  ```
 
  
