@@ -69,7 +69,7 @@ class MyClass
 my_object = MyClass("1234", 1000)
 
 ```
-***Short Note:** we usually write any sort of configuration related task in the constructor like database connectivity, hardware connectivity etc.
+**Short Note:** we usually write any sort of configuration related task in the constructor like database connectivity, hardware connectivity etc.
 so basically we dont want to give specific control to the user and that time we will use constructor. 
 
 
