@@ -77,7 +77,7 @@ so basically we dont want to give specific control to the user and that time we 
 ## Simple Implementation based on our learning
  Now let's write a code  to understand oop better based on atm system 
 
- ``` 
+ ```python 
   class Atm:
     def __init__(self) :
         self.pin= ""
