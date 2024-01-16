@@ -19,4 +19,12 @@ Imagine you're building a virtual world, like a video game or a simulation. In t
 **Polymorphism:** This is like using the same word in different contexts. It allows different objects to be treated as instances of the same type. For example, both a player and an enemy might have a "damage" method, but they would behave differently.<br/>
 <img src = "images/oop concept.jpg" width="1200" height="400">
 
-## Break Down Each of the concept with code and example 
+## Break Down Each of the concepts with code and example 
+### Function vs Method**: 
+**Functions:**
+
+**Definition:** A function is a block of code that performs a specific task. It is defined outside of any class or object.
+
+**Usage:** Functions are standalone and can be called from anywhere in the code, as long as they are in the same scope or imported.
+
+**Example:**
