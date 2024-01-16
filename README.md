@@ -52,3 +52,21 @@ Imagine you're building a virtual world, like a video game or a simulation. In t
     calc = Calculator()
     result = calc.add_numbers(5, 7)
     ```
+- **Short Note:** lets we have a list l and we want to find out length of this list.so we will write len(l) , but if we append something in a list we will write l.append(). cause len is a function and append, copy, pop,remove etc are a method of a list class.    
+
+## Constructor
+
+A constructor is like a setup wizard for objects in programming. It's a special method, often named `__init__`, that runs automatically when you create an object. Its main job is to initialize the object's attributes or perform any necessary setup.
+
+In Python:
+
+```python
+class MyClass:
+    def __init__(self, parameter1, parameter2):
+        # This is the constructor
+        self.attribute1 = parameter1
+        self.attribute2 = parameter2
+
+# Creating an object of MyClass
+my_object = MyClass("value1", "value2")
+    
