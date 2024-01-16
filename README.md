@@ -1,8 +1,10 @@
 # OOP-Cheatsheet
 ## Core Concept of OOP
-Lets talk about what is OOP in a layman language.
+Lets talk about what is  `OOP` in a layman language.
 
 Imagine you're building a virtual world, like a video game or a simulation. In this world, everything can be thought of as objects. Objects are like characters or things that have characteristics (attributes) and can do things (methods).
+
+**Class:** Class is a blueprint like how an object will behave.
 
 **Objects:** These are the main entities in your virtual world. For example, if you're creating a game, an object could be a player, an enemy, or a weapon.
 
@@ -16,3 +18,5 @@ Imagine you're building a virtual world, like a video game or a simulation. In t
 
 **Polymorphism:** This is like using the same word in different contexts. It allows different objects to be treated as instances of the same type. For example, both a player and an enemy might have a "damage" method, but they would behave differently.<br/>
 <img src = "images/oop concept.jpg" width="1200" height="400">
+
+## Break Down Each of the concept with code and example 
