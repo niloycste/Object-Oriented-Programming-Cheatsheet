@@ -56,17 +56,21 @@ Imagine you're building a virtual world, like a video game or a simulation. In t
 
 ## Constructor
 
-A constructor is like a setup wizard for objects in programming. It's a special method, often named `__init__`, that runs automatically when you create an object. Its main job is to initialize the object's attributes or perform any necessary setup.
-
+A constructor is like a setup wizard for objects in programming. It's a special method, often named `__init__`, that runs automatically when  create an object. Its main job is to initialize the object's attributes or perform any necessary setup.
 In Python:
 
 ```python
-class MyClass:
-    def __init__(self, parameter1, parameter2):
-        # This is the constructor
-        self.attribute1 = parameter1
-        self.attribute2 = parameter2
-
-# Creating an object of MyClass
-my_object = MyClass("value1", "value2")
+class MyClass  
+    def __init__(self, initial_pin, initial_balance): 
+    # this is constructor
+     self.pin = initial_pin
+     self.balance = initial_balance
     
+my_object = MyClass("1234", 1000)
+
+```
+***Short Note:** we usually write any sort of configuration related task in the constructor like database connectivity, hardware connectivity etc.
+so basically we dont want to give specific control to the user and that time we will use constructor. 
+
+
+      
