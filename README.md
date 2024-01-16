@@ -5,7 +5,6 @@ Lets talk about what is  `OOP` in a layman language.
 Imagine you're building a virtual world, like a video game or a simulation. In this world, everything can be thought of as objects. Objects are like characters or things that have characteristics (attributes) and can do things (methods).
 
 **Class:** Class is a blueprint like how an object will behave.
-
 **Objects:** These are the main entities in your virtual world. For example, if you're creating a game, an object could be a player, an enemy, or a weapon.
 
 **Attributes:** These are the characteristics or properties of the objects. For a player object, attributes might include the player's name, health, and score.
@@ -69,8 +68,12 @@ class MyClass
 my_object = MyClass("1234", 1000)
 
 ```
-**Short Note:** we usually write any sort of configuration related task in the constructor like database connectivity, hardware connectivity etc.
-so basically we dont want to give specific control to the user and that time we will use constructor. 
+**Short Note:** 
+- we usually write any sort of configuration related task in the constructor like database connectivity, hardware connectivity etc.
+so basically we dont want to give specific control to the user and that time we will use constructor.<br/>
+
+- Inside Class only two things are possible one is data and other one is method. Only object of this class can access that data and method even one method can't access another method within the class. if one method is trying to access another method we need and object and as `self` is the current object so we can access if we use self and thats why we use `self`.
+
 
 
       
