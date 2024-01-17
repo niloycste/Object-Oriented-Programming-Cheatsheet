@@ -62,8 +62,9 @@ In Python:
 class MyClass  
     def __init__(self, initial_pin, initial_balance): 
     # this is constructor
-     self.pin = initial_pin
-     self.balance = initial_balance
+     self.pin = initial_pin # instance variable 
+    #  we call it instance variable cause we write it within the constructor and value will be different for each object 
+     self.balance = initial_balance # instance variable
     
 my_object = MyClass("1234", 1000)
 
@@ -74,7 +75,7 @@ so basically we dont want to give specific control to the user and that time we 
 
 - Inside Class only two things are possible one is data and other one is method. Only object of this class can access that data and method even one method can't access another method and its datas within the class. if one method is trying to access another method we need and object and as `self` is the current object so we can access if we use self and thats why we use `self`.
 
-## Simple Implementation based on `class`,`constructor`,`method`,`object`
+## Simple Implementation based on `class`,`constructor`,`method` and `object`
  Now let's write a code  to understand oop better based on atm system 
 
  ```python 
@@ -82,7 +83,7 @@ so basically we dont want to give specific control to the user and that time we 
     def __init__(self) : 
         # Constructor
         self.pin= ""
-        self.balance=0
+        self.balance=0 
         self.menu() #we can access menu method property cause we use self
         
 
@@ -144,7 +145,87 @@ so basically we dont want to give specific control to the user and that time we 
   bank=Atm()
  ```
 
+ ### Encapsulation
+ Usually object can access everything like datas and methods so anyone can change the data so good practise is to hide the data.In pyhton we use `__` to hide the data and method. but fun fact is in python nothing is truely private. anyone can access the private data using class name and that data_name. lets give an example. lets we have a class name `Atm` and private data name `__balance` and object name `value`. now we can access that private data using `value._Atm__balance`. whatever in conventional method we use `getter` and `setter` emthod to access the data.
+ Let's implement the encapsulation concept on our previous code.
+ ```python
  
+  # We will build a real life project to understand oop better based on banking system 
+class Atm:
+    def __init__(self) :
+        self.__pin= ""  # hide the data using `__` so that user can't see that data
+        self.__balance=0
+        self.__menu()
+
+     # we use getter and setter method to access the private data
+    def get_pin(self):     
+       return self.__pin
+
+    def set_pin(self,new_pin):
+       if type(new_pin)==str:
+          
+          self.__pin=new_pin
+          print("print changed")
+       else: 
+          print("not allowed")      
+        
+
+    def __menu(self):  # we can also hide the method also 
+        user_input= input(""" 
+                         Hello, How would you like to proceed
+                          1.Enter 1 to create pin
+                          2.Enter 2 to deposit
+                          3.Enter 3 to Withdraw
+                          4.Enter 4 to check balance
+                          5.Enter 5 to exit
+
+                         """)
+        if user_input=="1":
+         self.create_pin()
+        elif user_input=="2":
+           self.deposit()
+        elif user_input=="3":
+           self.withdraw()
+        elif user_input=="4":
+           self.check_balance() 
+        else:
+           print("Bye")          
+        
+
+    def create_pin(self):
+       self.__pin=input("Enter your pin : ")
+       print("Pin set sucessfully")
+
+    def deposit(self):
+       temp=input("Enter your pin : ")
+       if temp==self.__pin:
+          amount=int(input("Enter the amount : "))
+          self.__balance=self.__balance+amount
+          print("Deposit Sucessfully")
+       else:
+          print("Invalid pin")   
+
+    def withdraw(self):
+       temp=input("Enter your pin : ")
+       if temp==self.__pin:
+          amount=int(input("Enter the amount : "))
+          if amount<self.__balance:
+             self.__balance=self.__balance-amount
+             print("operation sucessfull")
+          else:
+             print("Insufficient Funds") 
+       else:
+          print("Invalid Pin : ")  
+          
+    def check_balance(self):
+       temp=input("Enter your pin : ")
+       if temp==self.__pin:
+          print(self.__balance)
+       else:
+          print("invalid pin")  
+
+
+ ```      
 
 
 

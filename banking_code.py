@@ -1,12 +1,24 @@
 # We will build a real life project to understand oop better based on banking system 
 class Atm:
     def __init__(self) :
-        self.pin= ""
-        self.balance=0
-        self.menu()
+        self.__pin= ""  # hide the data using `__` so that user can't see that data
+        self.__balance=0
+        self.__menu()
+
+     # we use getter and setter method to access the private data
+    def get_pin(self):     
+       return self.__pin
+
+    def set_pin(self,new_pin):
+       if type(new_pin)==str:
+          
+          self.__pin=new_pin
+          print("print changed")
+       else: 
+          print("not allowed")      
         
 
-    def menu(self):
+    def __menu(self):  # we can also hide the method also 
         user_input= input(""" 
                          Hello, How would you like to proceed
                           1.Enter 1 to create pin
@@ -29,24 +41,24 @@ class Atm:
         
 
     def create_pin(self):
-       self.pin=input("Enter your pin : ")
+       self.__pin=input("Enter your pin : ")
        print("Pin set sucessfully")
 
     def deposit(self):
        temp=input("Enter your pin : ")
-       if temp==self.pin:
+       if temp==self.__pin:
           amount=int(input("Enter the amount : "))
-          self.balance=self.balance+amount
+          self.__balance=self.__balance+amount
           print("Deposit Sucessfully")
        else:
           print("Invalid pin")   
 
     def withdraw(self):
        temp=input("Enter your pin : ")
-       if temp==self.pin:
+       if temp==self.__pin:
           amount=int(input("Enter the amount : "))
-          if amount<self.balance:
-             self.balance=self.balance-amount
+          if amount<self.__balance:
+             self.__balance=self.__balance-amount
              print("operation sucessfull")
           else:
              print("Insufficient Funds") 
@@ -55,8 +67,8 @@ class Atm:
           
     def check_balance(self):
        temp=input("Enter your pin : ")
-       if temp==self.pin:
-          print(self.balance)
+       if temp==self.__pin:
+          print(self.__balance)
        else:
           print("invalid pin")  
 
