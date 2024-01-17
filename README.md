@@ -228,7 +228,7 @@ class Atm:
 
  ```
  This is the class diagram :
- <img src = "images/class.jpg" width="800" height="400">      
+ <img src = "images/class.jpg" width="1000" height="700">      
 
 
 
