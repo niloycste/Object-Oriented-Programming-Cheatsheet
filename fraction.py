@@ -1,36 +1,27 @@
-class Atm:
-
-    __counter=1 # Static/Class varible
-
-    def __init__(self) :
-        self.__pin= ""  
-        self.__balance=0
-        self.serialno=Atm.__counter # to access static variable we write class name.static variable like Atm.counter
-        Atm.__counter=Atm.__counter+1
-
-#for static variable we dont need to use `self`. as we use this getter and setter method access the static variable so we dont need to use self 
-    @staticmethod    
-    def get_counter(): 
-        return Atm.__counter
+class Customer:
+    def __init__(self,name,gender,address):
+        self.name=name
+        self.gender=gender
+        self.address=address
 
 
-    def set_counter(new):
-       if type(new)==int:
-          Atm.__counter=new
-       else:
-          print("Not Allowed")      
+    def edit_profile(self,new_name,new_city,new_pin,new_state):
+        self.name=new_name
+        self.address.change_address(new_city,new_pin,new_state)    #aggregation
 
-        
+class Address:
+    def __init__(self, city,pincode,state):
+        self.city=city
+        self.pincode=pincode
+        self.state=state
 
-   
-    def get_pin(self):     
-       return self.__pin
+    def change_address(self,new_city,new_pin, new_state):
+        self.city=new_city
+        self.pincode=new_pin
+        self.state=new_state    
 
-    def set_pin(self,new_pin):
-       if type(new_pin)==str:
-          
-          self.__pin=new_pin
-          print("print changed")
-       else: 
-          print("not allowed")      
-        
+add=Address("Comilla",3519, "Chittagong")
+cust=Customer("Niloy","Male",add)   #when we give address of a customer we pass Address class object `add`
+
+cust.edit_profile("Nayan","Dhaka",3510,"manik")
+print(cust.address.city)             
