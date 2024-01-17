@@ -5,7 +5,7 @@ Lets talk about what is  `OOP` in a layman language.
 Imagine you're building a virtual world, like a video game or a simulation. In this world, everything can be thought of as objects. Objects are like characters or things that have characteristics (attributes) and can do things (methods).
 
 **Class:** Class is a blueprint like how an object will behave.
-**Objects:** These are the main entities in your virtual world. For example, if you're creating a game, an object could be a player, an enemy, or a weapon.
+**Objects:** These are the main entities in your virtual world. For example, if you're creating a game, an object could be a player, an enemy, or a weapon.Objects are mutable like list,dict and sets cause it works like value by reference like it stores the data in a same location.
 
 **Attributes:** These are the characteristics or properties of the objects. For a player object, attributes might include the player's name, health, and score.
 
@@ -229,6 +229,26 @@ class Atm:
  ```
  This is the class diagram :
  <img src = "images/class.jpg" width="1000" height="700">      
+
+ ## Collecttion of Objects
+
+ we can keep the objects as a list, dict
+ 
+ ```python
+  class Customer:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+
+c1=Customer("niloy",26)
+c2=Customer("nayan",27)
+c3=Customer("piyas",30)
+
+L=[c1,c2,c3] # pass the objects in a list
+for i in L:
+    print(i.name,i.age)
+ 
+ ```
 
 
 
