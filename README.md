@@ -333,8 +333,51 @@ print(cust.address.city)
 ```
 
 **Polymorphism:**
-It is also called `Is-A relationship`.Inheritance is a fundamental concept in object-oriented programming, allowing a new class to inherit the properties and behaviors of an existing class.
+It is also called `Is-A relationship`.Inheritance is a fundamental concept in object-oriented programming, allowing a new class to inherit the properties and behaviors of an existing class.In inheritance child class can inherit parent class property but parent class can't inherit child class property.we usually inherit `datamembers`, `method` and `constructor` but we are not allowed to inherit `private datamember`.  
 <img src = "images/inher.png" width="1000" height="700"> 
+
+```python
+# Base class User
+class User:
+    def __init__(self, username, email):
+        self.username = username
+        self.email = email
+
+    def login(self):
+        print(f"{self.username} is logging in")
+
+    def register(self):
+        print(f"{self.username} is registering")
+
+# Base class Student
+class Student:
+    def __init__(self, student_id, courses):
+        self.student_id = student_id
+        self.courses = courses
+
+    def enroll(self):
+        print(f"Student {self.student_id} is enrolling in courses")
+
+    def review(self):
+        print(f"Student {self.student_id} is reviewing courses")
+
+# Derived class StudentUser inheriting from both User and Student
+class StudentUser(User, Student):
+    def __init__(self, username, email, student_id, courses):
+        # Calling the constructors of both base classes
+        User.__init__(self, username, email)
+        Student.__init__(self, student_id, courses)
+
+# Creating an instance of the derived class
+student_user = StudentUser("john_doe", "john@example.com", "S12345", ["Math", "Physics"])
+
+# Accessing methods from both base classes
+student_user.login()    # Outputs: john_doe is logging in
+student_user.enroll()   # Outputs: Student S12345 is enrolling in courses
+
+
+```
+
 
 
 
