@@ -392,7 +392,7 @@ student_user.enroll()
 Polymorphism is the ability of a class to take on multiple forms, where an object can represent different types or have different behaviors based on the context. There are two types of polymorphism 
 
 - Method Overloading:
-Method overloading is the ability to define multiple methods in the same class with the same name but with a different number or type of parameters.
+Method overloading is the ability to define multiple methods in the same class with the same name but with a different number or type of parameters.It is also called compile time polymorphism
 ```python
 class Calculator:
     def add(self, a, b):
@@ -407,10 +407,11 @@ print(calc.add(1, 2))     # Raises an error as there is no add method with two p
 print(calc.add(1, 2, 3))  # Outputs: 6
 
 ```
- method overloading is attempted in the Calculator class, but it's not directly supported in Python like in some other languages. In Python, when you define multiple methods with the same name in a class, the last one defined will override the previous ones.
+ method overloading is attempted in the Calculator class, but it's not directly supported in Python like in some other languages. In Python, when we define multiple methods with the same name in a class, the last one defined will override the previous ones.
 
  - Method Overridning: 
- Method overriding occurs when a subclass provides a specific implementation for a method that is already defined in its superclass.
+ Method overriding occurs when a subclass provides a specific implementation for a method that is already defined in its superclass.It is also 
+ called runtime polymorphism or dynamic polymorphism.
 
  ```python
  class Phone:
@@ -443,6 +444,65 @@ s.buy() # SmartPhone method buy will be called not Phone class method cause we c
 
 
 **Super() keyword:**
+using `super()` we can invoke parent class method and constructor not attribute. 
+
+```python
+class Phone:
+    def __init__(self,price,brand, camera):
+        print("Inside the constructor")
+        self.price=price
+        self.brand=brand
+        self.camera=camera
+
+    def buy(self):
+        print("Buying a phone")
+
+class SmartPhone(Phone):
+
+
+    def buy(self):
+        print("Buying smartphone")
+        super().buy() #using super we can invoke parent class method and constructor sp parent class buy() method will be called 
+
+s=SmartPhone(17200,"REDMI Note 10S", 64) # Phone class constructor will be called as SmartPhone doesn't have constructor
+print(s.price,s.brand,s.camera)
+
+s.buy() # SmartPhone method buy will be called not Phone class method cause we create an object of SmartPhone. 
+
+
+
+
+```
+Let's take another example where we use constructor in the both classes.
+
+```python
+class Phone:
+    def __init__(self,price,brand, camera):
+        print("Inside the phone constructor")
+        self.price=price
+        self.brand=brand
+        self.camera=camera
+
+    
+
+class SmartPhone(Phone):
+     
+     def __init__(self,price,brand,camera,os,ram):
+         print("this portion will execute first")
+         super().__init__(price,brand,camera)
+         self.os=os
+         self.ram=ram
+         print("inside smartphone constructor")
+
+
+s=SmartPhone(17200,"REDMI Note 10S", 64, "Android",6) 
+
+print(s.os,s.brand)
+
+
+```
+
+
 
 
 

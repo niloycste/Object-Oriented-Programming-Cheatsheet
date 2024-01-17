@@ -1,22 +1,24 @@
 class Phone:
     def __init__(self,price,brand, camera):
-        print("Inside the constructor")
+        print("Inside the phone constructor")
         self.price=price
         self.brand=brand
         self.camera=camera
 
-    def buy(self):
-        print("Buying a phone")
+    
 
 class SmartPhone(Phone):
+     
+     def __init__(self,price,brand,camera,os,ram):
+         print("this portion will execute first")
+         super().__init__(price,brand,camera)
+         self.os=os
+         self.ram=ram
+         print("inside smartphone constructor")
 
 
-    def buy(self):
-        print("Buying smartphone")
+s=SmartPhone(17200,"REDMI Note 10S", 64, "Android",6) 
 
-s=SmartPhone(17200,"REDMI Note 10S", 64) # Phone class constructor will be called as SmartPhone doesn't have constructor
-print(s.price,s.brand,s.camera)
-
-s.buy() # SmartPhone method buy will be called not Phone class method cause we create an object of SmartPhone. 
+print(s.os,s.brand)
 
 
