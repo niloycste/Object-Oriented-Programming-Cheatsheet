@@ -369,14 +369,27 @@ class StudentUser(User, Student):
         Student.__init__(self, student_id, courses)
 
 # Creating an instance of the derived class
-student_user = StudentUser("john_doe", "john@example.com", "S12345", ["Math", "Physics"])
+student_user = StudentUser("niloy islam", "niloy@gmail.com", "S12345", ["Math", "Physics"])
 
 # Accessing methods from both base classes
-student_user.login()    # Outputs: john_doe is logging in
-student_user.enroll()   # Outputs: Student S12345 is enrolling in courses
+student_user.login()    
+student_user.enroll()   
 
 
 ```
+
+- Types of Inheritance:
+<img src = "images/types.jpg" width="1000" height="700"> 
+
+
+**Short Note:**
+If we have two class and if parent class has constructor and child class one doesn't have any constructor but we create an object of child class that time parent class constructor will be called.
+
+**Polymorphism**
+
+
+**Super() keyword:**
+
 
 
 
