@@ -384,6 +384,73 @@ student_user.enroll()
 - Types of Inheritance:
 <img src = "images/types.jpg" width="1000" height="700"> 
 
+**Multiple Inheritance:**
+```python
+ class A:
+    def method_A(self):
+        print("Method A")
+
+class B:
+    def method_B(self):
+        print("Method B")
+
+class C(A, B):
+    def method_C(self):
+        print("Method C")
+
+# Example usage
+c_instance = C()
+c_instance.method_A()  # Accessing method from class A
+c_instance.method_B()  # Accessing method from class B
+c_instance.method_C()  # Accessing method from class C
+
+```
+**Hierarchical Inheritance:**
+
+```python
+class Shape:
+    def draw(self):
+        print("Drawing a shape")
+
+class Circle(Shape):
+    def draw(self):
+        print("Drawing a circle")
+
+class Square(Shape):
+    def draw(self):
+        print("Drawing a square")
+
+# Example usage
+circle_instance = Circle()
+circle_instance.draw()  # Accessing overridden method in Circle class
+
+square_instance = Square()
+square_instance.draw()  # Accessing overridden method in Square class
+
+
+```
+**Multilavel Inheritance:**
+```python
+class Animal:
+    def speak(self):
+        print("Animal speaks")
+
+class Dog(Animal):
+    def bark(self):
+        print("Dog barks")
+
+class GermanShepherd(Dog):
+    def guard(self):
+        print("German Shepherd guards")
+
+# Example usage
+german_shepherd_instance = GermanShepherd()
+german_shepherd_instance.speak()  # Accessing method from Animal class
+german_shepherd_instance.bark()   # Accessing method from Dog class
+german_shepherd_instance.guard()  # Accessing method from GermanShepherd class
+
+```
+
 
 
 
@@ -444,7 +511,7 @@ s.buy() # SmartPhone method buy will be called not Phone class method cause we c
 
 
 **Super() keyword:**
-using `super()` we can invoke parent class method and constructor not attribute. 
+using `super()` we can invoke parent class method and constructor. 
 
 ```python
 class Phone:
