@@ -150,7 +150,8 @@ so basically we dont want to give specific control to the user and that time we 
  Let's implement the encapsulation concept on our previous code.
  ```python
  
-  # We will build a real life project to understand oop better based on banking system 
+  # We will build a real life project to understand oop better based on the atm transaction
+  #  
 class Atm:
     def __init__(self) :
         self.__pin= ""  # hide the data using `__` so that user can't see that data
@@ -225,7 +226,9 @@ class Atm:
           print("invalid pin")  
 
 
- ```      
+ ```
+ This is the class diagram :
+ <img src = "images/class.jpg" width="800" height="400">      
 
 
 
