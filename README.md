@@ -256,7 +256,7 @@ for i in L:
   **Static/Class Variable:**
      The value of a variable will be same for each objects. like if we want to store `IFSC` code and as `IFSC` code same for a branch so take it as a static variable. 
 
-     ```python
+   ```python
       class Atm:
 
     __counter=1 # Static/Class varible
@@ -267,10 +267,11 @@ for i in L:
         self.serialno=Atm.__counter # to access static variable we write class name.static variable like Atm.counter
         Atm.__counter=Atm.__counter+1
 
-#for static variable we dont need to use `self`. as we use this getter and setter method access the static variable so we dont need to use self 
+                      
+                    
     @staticmethod    
     def get_counter(): 
-        return Atm.__counter
+        return Atm.__counter  #for static variable we dont need to use `self`. as we use this getter and setter method access the static variable so we dont need to use self 
 
 
     def set_counter(new):
@@ -294,7 +295,7 @@ for i in L:
           print("not allowed")      
         
      
-     ```
+   ```
 
 
 
