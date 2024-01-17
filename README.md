@@ -510,7 +510,7 @@ s.buy() # SmartPhone method buy will be called not Phone class method cause we c
 
 
 
-**Super() keyword:**
+## Super() keyword
 using `super()` we can invoke parent class method and constructor. 
 
 ```python
