@@ -336,6 +336,9 @@ print(cust.address.city)
 It is also called `Is-A relationship`.Inheritance is a fundamental concept in object-oriented programming, allowing a new class to inherit the properties and behaviors of an existing class.In inheritance child class can inherit parent class property but parent class can't inherit child class property.we usually inherit `datamembers`, `method` and `constructor` but we are not allowed to inherit `private datamember`.  
 <img src = "images/inher.png" width="1000" height="700"> 
 
+**Short Note:**
+If we have two class and if parent class has constructor and child class one doesn't have any constructor but we create an object of child class that time parent class constructor will be called.
+
 ```python
 # Base class User
 class User:
@@ -382,10 +385,61 @@ student_user.enroll()
 <img src = "images/types.jpg" width="1000" height="700"> 
 
 
-**Short Note:**
-If we have two class and if parent class has constructor and child class one doesn't have any constructor but we create an object of child class that time parent class constructor will be called.
+
 
 **Polymorphism**
+
+Polymorphism is the ability of a class to take on multiple forms, where an object can represent different types or have different behaviors based on the context. There are two types of polymorphism 
+
+- Method Overloading:
+Method overloading is the ability to define multiple methods in the same class with the same name but with a different number or type of parameters.
+```python
+class Calculator:
+    def add(self, a, b):
+        return a + b
+
+    def add(self, a, b, c):
+        return a + b + c
+
+calc = Calculator()
+
+print(calc.add(1, 2))     # Raises an error as there is no add method with two parameters
+print(calc.add(1, 2, 3))  # Outputs: 6
+
+```
+ method overloading is attempted in the Calculator class, but it's not directly supported in Python like in some other languages. In Python, when you define multiple methods with the same name in a class, the last one defined will override the previous ones.
+
+ - Method Overridning: 
+ Method overriding occurs when a subclass provides a specific implementation for a method that is already defined in its superclass.
+
+ ```python
+ class Phone:
+    def __init__(self,price,brand, camera):
+        print("Inside the constructor")
+        self.price=price
+        self.brand=brand
+        self.camera=camera
+
+    def buy(self):
+        print("Buying a phone")
+
+class SmartPhone(Phone):
+
+
+    def buy(self):
+        print("Buying smartphone")
+
+s=SmartPhone(17200,"REDMI Note 10S", 64) # Phone class constructor will be called as SmartPhone doesn't have constructor
+print(s.price,s.brand,s.camera)
+
+s.buy() # SmartPhone method buy will be called not Phone class method cause we create an object of SmartPhone. 
+
+
+
+ 
+ ```
+
+
 
 
 **Super() keyword:**

@@ -1,27 +1,22 @@
-class Customer:
-    def __init__(self,name,gender,address):
-        self.name=name
-        self.gender=gender
-        self.address=address
+class Phone:
+    def __init__(self,price,brand, camera):
+        print("Inside the constructor")
+        self.price=price
+        self.brand=brand
+        self.camera=camera
+
+    def buy(self):
+        print("Buying a phone")
+
+class SmartPhone(Phone):
 
 
-    def edit_profile(self,new_name,new_city,new_pin,new_state):
-        self.name=new_name
-        self.address.change_address(new_city,new_pin,new_state)    #aggregation
+    def buy(self):
+        print("Buying smartphone")
 
-class Address:
-    def __init__(self, city,pincode,state):
-        self.city=city
-        self.pincode=pincode
-        self.state=state
+s=SmartPhone(17200,"REDMI Note 10S", 64) # Phone class constructor will be called as SmartPhone doesn't have constructor
+print(s.price,s.brand,s.camera)
 
-    def change_address(self,new_city,new_pin, new_state):
-        self.city=new_city
-        self.pincode=new_pin
-        self.state=new_state    
+s.buy() # SmartPhone method buy will be called not Phone class method cause we create an object of SmartPhone. 
 
-add=Address("Comilla",3519, "Chittagong")
-cust=Customer("Niloy","Male",add)   #when we give address of a customer we pass Address class object `add`
 
-cust.edit_profile("Nayan","Dhaka",3510,"manik")
-print(cust.address.city)             
