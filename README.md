@@ -569,6 +569,12 @@ print(s.os,s.brand)
 
 ```
 
+## Abstraction
+abstraction refers to the concept of hiding the complex implementation details of an object and exposing only the essential features and functionalities to the outside world. It involves creating abstract classes and interfaces that define the common properties and behaviors that a group of related objects should have, without specifying the details of how those properties and behaviors are implemented.
+
+**Abstract Class:**
+Abstract Classes: An abstract class is a class that cannot be instantiated on its own and may contain abstract methods (methods without a body). Abstract classes serve as blueprints for other classes and define a common interface for a group of related classes. In Python, we can create an abstract class using the ABC (Abstract Base Class) module.
+
 
 
 
