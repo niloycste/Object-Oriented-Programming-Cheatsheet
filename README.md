@@ -332,6 +332,9 @@ print(cust.address.city)
 
 ```
 
+**Polymorphism:**
+It is also called `Is-A relationship`.Inheritance is a fundamental concept in object-oriented programming, allowing a new class to inherit the properties and behaviors of an existing class.
+<img src = "images/inher.png" width="1000" height="700"> 
 
 
 
