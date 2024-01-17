@@ -230,10 +230,10 @@ class Atm:
  This is the class diagram :
  <img src = "images/class.jpg" width="1000" height="700">      
 
- ## Collecttion of Objects
+ ## Collection of Objects
 
  we can keep the objects as a list, dict
- 
+
  ```python
   class Customer:
     def __init__(self,name,age):
@@ -249,6 +249,52 @@ for i in L:
     print(i.name,i.age)
  
  ```
+
+ ## Variables
+ **Instance Variable:** 
+    we write instance variable within the constructor and value will be different for each objects.
+  **Static/Class Variable:**
+     The value of a variable will be same for each objects. like if we want to store `IFSC` code and as `IFSC` code same for a branch so take it as a static variable. 
+
+     ```python
+      class Atm:
+
+    __counter=1 # Static/Class varible
+
+    def __init__(self) :
+        self.__pin= ""   #instance variable 
+        self.__balance=0 # instance variable
+        self.serialno=Atm.__counter # to access static variable we write class name.static variable like Atm.counter
+        Atm.__counter=Atm.__counter+1
+
+#for static variable we dont need to use `self`. as we use this getter and setter method access the static variable so we dont need to use self 
+    @staticmethod    
+    def get_counter(): 
+        return Atm.__counter
+
+
+    def set_counter(new):
+       if type(new)==int:
+          Atm.__counter=new
+       else:
+          print("Not Allowed")      
+
+        
+
+   
+    def get_pin(self):     
+       return self.__pin
+
+    def set_pin(self,new_pin):
+       if type(new_pin)==str:
+          
+          self.__pin=new_pin
+          print("print changed")
+       else: 
+          print("not allowed")      
+        
+     
+     ```
 
 
 
