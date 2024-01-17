@@ -296,6 +296,12 @@ for i in L:
         
      
    ```
+## Relationship
+**Aggregation:**
+It is also called `Has-A relationship`. Like if we have two class name customer and address and customer is trying to access address so this is `Has-A relationship`.we use `diamond` sign to indicate aggregation in class diagram.<br/>
+<img src = "images/aggregation.png" width="1000" height="700">  
+
+
 
 
 
