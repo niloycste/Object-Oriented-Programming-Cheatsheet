@@ -574,6 +574,33 @@ abstraction refers to the concept of hiding the complex implementation details o
 
 **Abstract Class:**
 Abstract Classes: An abstract class is a class that cannot be instantiated on its own and may contain abstract methods (methods without a body). Abstract classes serve as blueprints for other classes and define a common interface for a group of related classes. In Python, we can create an abstract class using the ABC (Abstract Base Class) module.
+```python
+from abc import ABC,abstractmethod
+class BankApp(ABC):
+
+
+    def database(self):
+        print("connected to database")
+
+    @abstractmethod    
+    def security(self):
+        pass
+    
+
+class MobileApp(BankApp):
+    def mobile_login(self):
+        print("login into mobile")
+
+    def security(self):
+        print("mobile security") # we must make security method in this class which is abstract method of its parent class `BankApp`, otherwise we can't inherit.
+mob=MobileApp()
+mob.security()
+mob.mobile_login()        
+
+```
+
+## Notes: 
+This is open source. If you are interested, you can contribute to this documentation. Just fork this repository and make the changes or add new content.
 
 
 
