@@ -1,21 +1,13 @@
-from abc import ABC,abstractmethod
-class BankApp(ABC):
-
-
-    def database(self):
-        print("connected to database")
-
-    @abstractmethod    
-    def security(self):
-        pass
+def is_even(number):
+    if type(number)==int:
+      if number %2==0:
+         return "even"
+      else:
+         return 'odd'
+      
+    else:
+       return "not allowed"  
     
 
-class MobileApp(BankApp):
-    def mobile_login(self):
-        print("login into mobile")
-
-    def security(self):
-        print("mobile security") # we must make security method in this class which is abstract method of its parent class `BankApp`, otherwise we can't inherit.
-mob=MobileApp()
-mob.security()
-mob.mobile_login()        
+for i in range(1,11):
+    print(is_even("niloy"))   

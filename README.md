@@ -332,7 +332,7 @@ print(cust.address.city)
 
 ```
 
-**Polymorphism:**
+**Inheritance:**
 It is also called `Is-A relationship`.Inheritance is a fundamental concept in object-oriented programming, allowing a new class to inherit the properties and behaviors of an existing class.In inheritance child class can inherit parent class property but parent class can't inherit child class property.we usually inherit `datamembers`, `method` and `constructor` but we are not allowed to inherit `private datamember`.  
 <img src = "images/inher.png" width="1000" height="700"> 
 
