@@ -429,7 +429,7 @@ square_instance.draw()  # Accessing overridden method in Square class
 
 
 ```
-**Multilavel Inheritance:**
+**Multilevel Inheritance:**
 ```python
 class Animal:
     def speak(self):
